@@ -18,18 +18,10 @@ var guessesLeft
 var letterGuessed
 var randomLetterGen
 var GuessCounter 
+var letters
+
 
 winCount: counts number of times a user hits the key of a matching letter cycled within an array.
-
-
-{
-
-winCount = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-
-
-}
-
-
 
 
 lossCount: counts number of times user chooses a letter wrong after 9 guesses.
@@ -45,6 +37,20 @@ guessCounter%: counts the number of guesses which manipulates the guessesLeft co
 
 
 so winCount,  ++ for loopn with a conditional if and else
+
+
+
+for(var i=0; i < letters.length; i++)
+
+
+{
+
+var letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+
+
+
+
+}
 
 
 
