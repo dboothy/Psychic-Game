@@ -9,9 +9,7 @@ var rand = letters[Math.floor(Math.random() * letters.length)];
 
 
 
-
-
-function GameStart(){
+function gameStart(){
 
 var gameHtml = "<p>Wins:" + wins + "</p>"
 document.querySelector("#winsPlace").innerHTML = gameHtml;
@@ -22,20 +20,69 @@ document.querySelector("#lossesPlace").innerHTML = gameHtml;
 var gameHtml = "<p> Guesses left:" + guessesLeft + "</p>"
 document.querySelector("#guessesLeftPlace").innerHTML = gameHtml;
 
-var gameHtml = "<p> Guesses so far:" + guessesSoFar.join + "</p>"
+var gameHtml = "<p> Guesses so far:" + guessesSoFar.join(','); + "</p>"
 document.querySelector("#guessesSoFarPlace").innerHTML = gameHtml;
 
 }
 
-GameStart();
+
+function gameRestart(){
+
+var guessesLeft = 9;
+var guessesSoFar = [];
+
+}
+
+gameStart();
 
 document.onkeyup = function(event) {
-	var userChoice = event.key;
-	if (userChoice === rand){
-		checkLetter(userChoice)
-	}
+  var userChoice = event.key;
+      guessesLeft--;
 
-};
+guessesSoFar.push(userChoice);
+
+  if(userChoice == rand){
+    checkAnswer(userChoice)
+  }
+}  
+
+function checkAnswer(userChoice){
+  if(userChoice == rand){
+    wins++; gameRestart();
+
+  }else(userChoice!== rand)
+    reduceGuessesLeft(userChoice)
+    
+  }
+
+function reduceGuessesLeft(userChoice){
+  if(userChoice !== rand){
+    guessesLeft--;
+  }if (guessesLeft == 0){
+    losses++; gameRestart();
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

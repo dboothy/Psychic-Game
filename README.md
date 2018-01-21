@@ -56,6 +56,9 @@ ________________________________________________________________________________
 
 // rand = random string chosen from array. This string can be matched by a user upon hittting a key that corresponds with the value of the string. when the user matches the string value  with their key press, this will increase the value of the wins. If the user hits a key that is not the same value as the chosen string the value of Guesses left decreases by 1 each time with each unmatching key press. The unmatched key press displays under guesses so far. when guesses left value decreases to 0, the value of loss increases by 1. When the value of win or lose increases by 1, the game is reset//
 
+
+
+
 _______________________________________________________________________________________________
 
 RandomLetter= letter produced by math function
